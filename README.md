@@ -4,5 +4,5 @@
 
 
 
-I am Vicente Martí Gallart, a software engineer graduated at [UJI](https://www.uji.es/) currently working in [Laberit](https://www.laberit.com/) as a software developer and studiyng a Big Data & Cloud master at [EDEM](https://edem.eu/). 
+I am Vicente Martí Gallart, a software engineer graduated at [UJI](https://www.uji.es/), currently working in [Laberit](https://www.laberit.com/) as a software developer and studiyng a Big Data & Cloud master at [EDEM](https://edem.eu/). 
 
