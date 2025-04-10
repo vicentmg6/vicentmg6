@@ -1,9 +1,10 @@
 name: Event Commit - Multiple Steps
 
 on:
-  push:
+  pull_request:
+    types: [opened, synchronize]
     branches:
-      - main
+      - 1.single_step
 
 jobs:
   hello-world:

@@ -1,0 +1,27 @@
+name: Event Commit - Multiple Steps
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+    - 1.single_step
+
+jobs:
+  ejer2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r code/python/requirements.txt
+          flake8 code/python/main.py
+          python -m unittest discover -s code/python -p "test_main.py"
