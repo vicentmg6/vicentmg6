@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [opened, synchronize]
     branches:
-      - 1.single_step
+    - 1.single_step
 
 jobs:
   ejer2:
