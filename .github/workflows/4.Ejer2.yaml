@@ -1,0 +1,21 @@
+name: Event Commit - Multiple Steps
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - 1.single_step
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Instal pyhton
+        run: sudo apt-get install python3.10
+      - name: Install flake8
+        run: pip install flake8
+      - name: Execute flake8
+        run: flake8 /home/code/ejercicio.py
