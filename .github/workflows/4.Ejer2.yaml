@@ -7,19 +7,10 @@ on:
       - 1.single_step
 
 jobs:
-    ejer2:
-      runs-on: ubuntu-latest
+  ejer2:
+    runs-on: ubuntu-latest
 
     steps:
-      # - name: Checkout code
-      #   uses: actions/checkout@v4
-      # - name: Instal pyhton
-      #   run: sudo apt-get install python3.10
-      # - name: Install flake8
-      #   run: pip install flake8
-      # - name: Execute flake8
-      #   run: flake8 /home/code/main.py
-      # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
       # Set up Python
@@ -33,5 +24,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r code/python/requirements.txt
           flake8 code/python/main.py
-          python -m unittest discover -s 
-          code/python -p "test_main.py"
+          python -m unittest discover -s code/python -p "test_main.py"

@@ -4,7 +4,7 @@ on:
   label:
     pull_request:
       types: [labeled]
-      - 1.single_step
+        - 1.single_step
 
 jobs:
   hello-world:
