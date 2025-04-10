@@ -7,15 +7,29 @@ on:
       - 1.single_step
 
 jobs:
-  hello-world:
+    ejer2:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Instal pyhton
-        run: sudo apt-get install python3.10
-      - name: Install flake8
-        run: pip install flake8
-      - name: Execute flake8
-        run: flake8 /home/code/ejercicio.py
+      # - name: Checkout code
+      #   uses: actions/checkout@v4
+      # - name: Instal pyhton
+      #   run: sudo apt-get install python3.10
+      # - name: Install flake8
+      #   run: pip install flake8
+      # - name: Execute flake8
+      #   run: flake8 /home/code/main.py
+      # Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+    # Set up Python
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+    # Install dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r code/python/requirements.txt
+        flake8 code/python/main.py
