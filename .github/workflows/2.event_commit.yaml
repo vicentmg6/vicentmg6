@@ -1,0 +1,26 @@
+name: Event Commit - Multiple Steps
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello World
+        run: echo "Hello, world!"
+      - name: Bye World 
+        run: echo "Bye World!"
+
+  hello-Vicent:
+    runs-on: ubuntu-latest
+    needs: hello-world
+
+    steps:
+      - name: Hello World
+        run: echo "Hello, Vicent!"
+      - name: Bye World 
+        run: echo "Bye Vicent!"
