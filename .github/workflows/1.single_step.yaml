@@ -12,3 +12,12 @@ jobs:
         run: echo "Hello, world!"
       - name: Bye World 
         run: echo "Bye World!"
+
+  hello-Vicent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello World
+        run: echo "Hello, Vicent!"
+      - name: Bye World 
+        run: echo "Bye Vicent!"
